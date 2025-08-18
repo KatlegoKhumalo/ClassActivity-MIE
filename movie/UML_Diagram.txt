@@ -1,0 +1,16 @@
++------------------+          +------------------+          +------------------+
+|     Person       |          |     Customer     |          |      Staff       |
++------------------+          +------------------+          +------------------+
+| - name: String   |<>--------| - customerID:int |          | - staffID: int   |
+| - email: String  |          | - rentals: List  |          | - role: String   |
++------------------+          +------------------+          +------------------+
+                            ^ Inherits from Person ^       ^ Inherits from Person ^
+
++------------------+          +------------------+
+|      Movie       |<>--------|      Rental      |
++------------------+          +------------------+
+| - title: String  |          | - rentalDate: Date|
+| - genre: String  |          | - returnDate: Date|
+| - year: int      |          | - customer: Customer|
+| - available:bool |          | - movie: Movie   |
++------------------+          +------------------+

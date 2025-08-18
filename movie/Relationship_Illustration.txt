@@ -1,0 +1,19 @@
+public class Main {
+    public static void main(String[] args) {
+        Movie movie1 = new Movie("Inception", "Sci-Fi", 2010);
+        Movie movie2 = new Movie("The Godfather", "Crime", 1972);
+
+        Customer customer1 = new Customer("William", 101);
+        Customer customer2 = new Customer("Covenant", 102);
+
+        Staff staff1 = new Staff("Katlego", 201, "Manager");
+
+        customer1.rentMovie(movie1);
+        customer2.rentMovie(movie2);
+
+        customer1.returnMovie(movie1);
+
+        System.out.println(customer1.getRentals().get(0).getReturnDate());
+        System.out.println(movie1.isAvailable());  // true
+    }
+}
